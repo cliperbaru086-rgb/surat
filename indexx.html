@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Spesial Untukmu ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #ffe5ec 0%, #ffc2d1 100%);
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #4a4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            width: 90%;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(225, 112, 150, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .heart-icon {
+            font-size: 50px;
+            color: #ff4d6d;
+            text-align: center;
+            animation: pulse 1.5s infinite;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff4d6d;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .letter-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            text-align: justify;
+            white-space: pre-line; /* Menjaga spasi antar paragraf */
+        }
+
+        .letter-content p {
+            margin-bottom: 20px;
+        }
+
+        .closing {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: right;
+            margin-top: 40px;
+            color: #ff4d6d;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        /* Hiasan Hati Berjatuhan */
+        .falling-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 77, 109, 0.4);
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Efek Hati Berjatuhan -->
+    <div class="falling-hearts" id="heartsContainer"></div>
+
+    <div class="container">
+        <div class="heart-icon">❤️</div>
+        <h1>Untuk Hedi...</h1>
+        
+        <div class="letter-content">
+            <p>Halo Hedi,</p>
+
+            <p>Hari ini aku tiba-tiba kepikiran tentang kita. Tentang bagaimana semesta mempertemukan dua manusia yang awalnya asing, lalu perlahan tumbuh menjadi bagian paling penting dalam hidup satu sama lain. Lewat tulisan sederhana ini, aku cuma ingin mengutarakan apa yang sering kali sulit aku ucapkan langsung lewat kata-kata.</p>
+
+            <p>Terima kasih ya, sudah hadir di hidupku. Terima kasih karena kamu selalu menjadi orang yang sabar menghadapi segala kurangku, mengerti naik-turunnya energiku, dan selalu menjadi tempat paling aman buat aku pulang setelah hari-hari yang melelahkan. Di dekatmu, aku merasa bisa menjadi diriku yang seutuhnya tanpa perlu takut dihakimi.</p>
+
+            <p>Aku bersyukur atas setiap tawa yang kita bagi, setiap cerita receh yang kita bahas sampai larut malam, bahkan untuk hal-hal kecil yang mungkin kelihatan sepele bagi orang lain, tapi sangat berharga buat aku. Kamu adalah salah satu alasan kenapa aku selalu bersemangat menyambut hari esok.</p>
+
+            <p>Aku tahu hubungan kita nggak akan selalu berjalan mulus. Pasti akan ada hari-hari di mana kita egois, salah paham, atau merasa lelah. Tapi lewat surat ini aku ingin berjanji, bahwa aku akan terus memilihmu. Aku akan memilih untuk berjuang bersamamu, memperbaiki apa yang retak, dan belajar menjadi pasangan yang lebih baik lagi untukmu setiap harinya.</p>
+
+            <p>Tetap di sampingku ya? Mari kita petualang lagi, melewati banyak hal baik dan buruk di depan sana bersama-sama. Aku sayang kamu, hari ini, esok, dan seterusnya.</p>
+            <p>Dan maaf ya kalau akhir-akhir ini aku jarang ngabarin kamu. Aku lagi sibuk banget sama urusan akhir-akhir ini, tapi aku sadar seharusnya aku tetap meluangkan waktu buat kasih kabar biar kamu nggak khawatir. Aku janji akan lebih sering ngabarin kamu mulai sekarang</p>
+        </div>
+
+        <div class="closing">
+            Dengan penuh cinta,<br>
+            [Azkasukaepep]
+        </div>
+    </div>
+
+    <script>
+        // Script untuk membuat efek hati berjatuhan secara acak
+        function createHeart() {
+            const container = document.getElementById('heartsContainer');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's'; // Antara 3-6 detik
+            heart.style.fontSize = Math.random() * 15 + 10 + 'px'; // Antara 10-25px
+            
+            container.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
